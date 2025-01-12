@@ -8,10 +8,10 @@ cen01:
 
 # desenha a primeira cor 
 cor1:
-    beq $21, $20, cor2_iniciar        # se ja desenhou todos os pixels, pula para o próximo bloco
-    sw $10, 0($8)           # desenha um pixel na posição atual
+    beq $21, $20, cor2_iniciar   # se ja desenhou todos os pixels, pula para o próximo bloco
+    sw $10, 0($8)           
     sw $10, 33000($8)       # espelha o pixel em outra parte da tela
-    addi $21, $21, 1        # incrementa o contador de pixels
+    addi $21, $21, 1        # contador de pixels
     addi $8, $8, 4          # avança p o prox pixel
     j cor1                  # continua o loop
 
